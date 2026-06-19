@@ -1,0 +1,31 @@
+# frontend
+frontend/node_modules
+frontend/.next
+
+# backend
+backend/venv
+backend/__pycache__
+
+# env
+.env
+.env.local
+
+# storage
+uploads
+storage
+
+# cache
+dump.rdb
+
+# build
+dist
+build
+
+# logs
+*.log
+
+# db
+*.db
+
+# vscode
+.vscode
