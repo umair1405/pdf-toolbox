@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils/cn";
 
 export function Pricing() {
-  return (
-    <section id="pricing" className="py-[120px] relative z-10">
+  return null;
+}
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="max-w-[560px] mx-auto mb-14 text-center">
           <span className="font-mono text-xs uppercase tracking-[0.14em] text-white/64 inline-flex items-center justify-center gap-2">

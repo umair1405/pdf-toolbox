@@ -16,11 +16,8 @@ const recentMock = [
 ];
 
 export function UploadSection() {
-  const { job, uploadProgress, isUploading, targetFormat, setTargetFormat } = useUploadStore();
-  const { upload } = useFileUpload();
-  const [fileName, setFileName] = useState<string | null>(null);
-
-  async function handleFile(file: File) {
+  return null;
+}
     setFileName(file.name);
     await upload(file);
   }

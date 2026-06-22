@@ -1,49 +1,56 @@
 "use client";
 
-import { useLenis } from "@/hooks/useLenis";
-import { GradientMesh } from "@/components/background/GradientMesh";
-import { ParticleField } from "@/components/background/ParticleField";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { Features } from "@/components/sections/Features";
-import { Tools } from "@/components/sections/Tools";
-import { UploadSection } from "@/components/sections/UploadSection";
-import { DashboardPreview } from "@/components/sections/DashboardPreview";
-import { Pricing } from "@/components/sections/Pricing";
-import { FAQ } from "@/components/sections/FAQ";
-import { Button } from "@/components/ui/Button";
+import { Dropzone } from "@/components/upload/Dropzone";
 
 export default function MarketingPage() {
-  useLenis();
+  const handleFileDrop = (file: File) => {
+    console.log("File selected:", file.name);
+  };
 
   return (
     <>
-      <GradientMesh />
-      <ParticleField />
       <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <Tools />
-        <UploadSection />
-        <DashboardPreview />
-        <Pricing />
-        <FAQ />
-        <section className="text-center py-20 relative z-10">
-          <div className="max-w-[1180px] mx-auto px-7">
-            <span className="font-mono text-xs uppercase tracking-[0.14em] text-white/64 inline-flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-grad-warm" />
-              Ready when you are
-            </span>
-            <h2 className="font-display font-semibold text-[clamp(28px,4vw,44px)] leading-[1.12] tracking-[-0.01em] mt-3.5">
-              Convert your first file, free.
-            </h2>
-            <Button href="#upload" className="mt-7">Start free</Button>
+      <main className="pt-24 min-h-screen bg-gray-50">
+        <section className="text-center py-16">
+          <div className="max-w-2xl mx-auto px-7">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              PDF to WORD Converter
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              Convert your PDF to WORD documents with incredible accuracy.
+            </p>
+            <p className="text-sm text-gray-500 mb-8">
+              Powered by <span className="text-red-600 font-semibold">Solid Documents</span>.
+            </p>
+
+            {/* Upload area */}
+            <div className="bg-white rounded-lg shadow-sm p-12">
+              <Dropzone onFile={handleFileDrop} />
+            </div>
+          </div>
+        </section>
+
+        {/* Stats section */}
+        <section className="py-16 bg-white border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-7">
+            <div className="grid grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-gray-900">2.1M+</div>
+                <div className="text-sm text-gray-600 mt-1">Files Converted</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-gray-900">99.95%</div>
+                <div className="text-sm text-gray-600 mt-1">Uptime</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-gray-900">4.2s</div>
+                <div className="text-sm text-gray-600 mt-1">Avg. Conversion</div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

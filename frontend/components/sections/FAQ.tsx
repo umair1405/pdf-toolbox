@@ -13,9 +13,8 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  return (
+  return null;
+}
     <section id="faq" className="py-[120px] relative z-10">
       <div className="max-w-[760px] mx-auto px-7">
         <div className="mb-14">

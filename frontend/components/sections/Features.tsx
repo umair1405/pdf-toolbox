@@ -46,8 +46,8 @@ function FeatureCard({ icon: Icon, title, desc }: (typeof features)[number]) {
 }
 
 export function Features() {
-  return (
-    <section id="features" className="py-[120px] relative z-10">
+  return null;
+}
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="max-w-[560px] mb-14">
           <span className="font-mono text-xs uppercase tracking-[0.14em] text-white/64 inline-flex items-center gap-2">

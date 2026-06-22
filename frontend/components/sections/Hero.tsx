@@ -1,22 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, float } from "@/animations/variants";
-import { siteConfig } from "@/config/site";
-import { Button } from "@/components/ui/Button";
-import { cn } from "@/utils/cn";
-
-const FORMAT_GRADIENTS: Record<string, string> = {
-  Word: "linear-gradient(135deg,#3B82F6,#6C63FF)",
-  PPT: "linear-gradient(135deg,#FF7A59,#FF4D4D)",
-  PNG: "linear-gradient(135deg,#6C63FF,#9B6BFF)",
-  JPG: "linear-gradient(135deg,#FF4D4D,#FF7A59)",
-  Excel: "linear-gradient(135deg,#22C55E,#6C63FF)",
-  TXT: "linear-gradient(135deg,#94A3B8,#475569)",
-};
-
-function useTypewriter(words: string[]) {
+export function Hero() {
+  return null;
+}
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
